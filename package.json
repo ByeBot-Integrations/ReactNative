@@ -1,9 +1,9 @@
 {
-  "name": "@captchacat/react-native",
-  "version": "0.1.0",
-  "description": "React Native integration for Captchacat",
-  "author": "Captchacat",
-  "homepage": "https://captchacat.com",
+  "name": "@byebot/react-native",
+  "version": "1.0.0",
+  "description": "React Native integration for Byebot",
+  "author": "Byebot",
+  "homepage": "https://byebot.de",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -38,7 +38,7 @@
   },
   "keywords": [
     "captcha",
-    "captchacat",
+    "byebot",
     "react-native",
     "mobile",
     "bot-detection"
@@ -46,6 +46,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Captchacat-Integrations/ReactNative"
+    "url": "https://github.com/ByeBot-Integrations/ReactNative"
   }
 }

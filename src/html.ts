@@ -1,4 +1,4 @@
-const DEFAULT_BASE_URL = 'https://challenge.captchacat.com';
+const DEFAULT_BASE_URL = 'https://challenge.byebot.de';
 
 export function generateHTML(options: {
   siteKey: string;

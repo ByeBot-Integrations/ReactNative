@@ -1,11 +1,11 @@
-# @captchacat/react-native
+# @byebot/react-native
 
-React Native integration for [Captchacat](https://captchacat.com) — a GDPR-compliant, proof-of-work CAPTCHA service.
+React Native integration for [Byebot](https://byebot.de) — a GDPR-compliant, proof-of-work CAPTCHA service.
 
 ## Installation
 
 ```bash
-npm install @captchacat/react-native react-native-webview
+npm install @byebot/react-native react-native-webview
 ```
 
 `react-native-webview` is a required peer dependency.
@@ -15,7 +15,7 @@ For iOS, run `cd ios && pod install` after installing.
 ## Usage
 
 ```tsx
-import { Captchacat } from '@captchacat/react-native';
+import { Byebot } from '@byebot/react-native';
 import { useState } from 'react';
 import { View, TextInput, Button, Alert } from 'react-native';
 
@@ -27,7 +27,7 @@ function LoginScreen() {
       <TextInput placeholder="Email" />
       <TextInput placeholder="Password" secureTextEntry />
 
-      <Captchacat
+      <Byebot
         siteKey="your-site-key"
         onVerify={(t) => setToken(t)}
         onError={(e) => Alert.alert('Error', e)}
@@ -48,7 +48,7 @@ function LoginScreen() {
 | Prop | Type | Required | Description |
 |------|------|----------|-------------|
 | `siteKey` | `string` | Yes | Your site's public key |
-| `baseUrl` | `string` | No | Challenge backend URL (default: `https://challenge.captchacat.com`) |
+| `baseUrl` | `string` | No | Challenge backend URL (default: `https://challenge.byebot.de`) |
 | `language` | `string` | No | Override widget language (e.g., `"de"`, `"fr"`) |
 | `onVerify` | `(token: string) => void` | No | Called when the challenge is solved |
 | `onError` | `(error: string) => void` | No | Called on load or runtime error |
@@ -57,14 +57,14 @@ function LoginScreen() {
 
 ## How It Works
 
-The SDK renders the Captchacat widget inside a WebView. The existing `widget.js` handles the full challenge flow (PoW solving, fingerprinting, interactive challenges). A JavaScript bridge intercepts the verification token and passes it to your React Native app.
+The SDK renders the Byebot widget inside a WebView. The existing `widget.js` handles the full challenge flow (PoW solving, fingerprinting, interactive challenges). A JavaScript bridge intercepts the verification token and passes it to your React Native app.
 
 ## Server-Side Validation
 
 After receiving the token, validate it on your backend:
 
 ```
-POST https://challenge.captchacat.com/validate_token
+POST https://challenge.byebot.de/validate_token
 
 {
   "api_key": "your-secret-api-key",

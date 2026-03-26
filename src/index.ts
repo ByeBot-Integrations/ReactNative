@@ -1,2 +1,2 @@
-export { Captchacat } from './Captchacat';
-export type { CaptchacatProps } from './types';
+export { Byebot } from './Byebot';
+export type { ByebotProps } from './types';

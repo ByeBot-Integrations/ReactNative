@@ -1,9 +1,9 @@
 import type { ViewStyle } from 'react-native';
 
-export interface CaptchacatProps {
+export interface ByebotProps {
   /** Your site's public key */
   siteKey: string;
-  /** Challenge backend URL (default: https://challenge.captchacat.com) */
+  /** Challenge backend URL (default: https://challenge.byebot.de) */
   baseUrl?: string;
   /** Override widget language (e.g., "de", "fr") */
   language?: string;

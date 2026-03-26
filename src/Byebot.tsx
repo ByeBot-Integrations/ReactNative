@@ -2,12 +2,12 @@ import React, { useCallback, useMemo, useRef, useState } from 'react';
 import { View } from 'react-native';
 import { WebView, type WebViewMessageEvent } from 'react-native-webview';
 import { generateHTML } from './html';
-import type { CaptchacatProps } from './types';
+import type { ByebotProps } from './types';
 
-const DEFAULT_BASE_URL = 'https://challenge.captchacat.com';
+const DEFAULT_BASE_URL = 'https://challenge.byebot.de';
 const DEFAULT_HEIGHT = 60;
 
-export const Captchacat: React.FC<CaptchacatProps> = ({
+export const Byebot: React.FC<ByebotProps> = ({
   siteKey,
   baseUrl = DEFAULT_BASE_URL,
   language,
@@ -28,7 +28,7 @@ export const Captchacat: React.FC<CaptchacatProps> = ({
 
   // Unique callback name (stable across renders)
   const callbackName = useMemo(
-    () => `captchacat_cb_${Math.random().toString(36).substring(2, 9)}`,
+    () => `byebot_cb_${Math.random().toString(36).substring(2, 9)}`,
     [],
   );
 
